@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dd-codex",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-31",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dd-codex-db",
+      "database_id": "15a2d20e-b91b-4ee4-9bed-1092d18e7d00",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "ENVIRONMENT": "production"
+  }
+}
